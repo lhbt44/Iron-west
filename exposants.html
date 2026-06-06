@@ -368,149 +368,259 @@
     <div class="section-divider">★ Exposants Premium</div>
     <div class="grid-view" id="exposantsContainer">
 
-      <!-- PREMIUM 1 -->
-      <div class="exp-card premium" data-cat="constructeur" data-name="Black Diamond Moto" onclick="openModal('bd')">
-        <div class="exp-card-img">
-          <span class="exp-card-img-text">BD</span>
-          <div class="exp-card-img-logo">BD</div>
-          <span class="premium-badge">★ Premium</span>
-          <span class="stand-badge">Stand A-01</span>
-        </div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot constructeur"></span>Constructeur</div>
-          <div class="exp-name">Black Diamond Moto</div>
-          <div class="exp-desc-short">Pionnier de la moto haute performance artisanale. Avant-première mondiale de la V-Twin 1800cc.</div>
-          <div class="exp-tags"><span class="exp-tag">Custom</span><span class="exp-tag">Performance</span><span class="exp-tag">Avant-première</span><span class="exp-tag">Essai</span></div>
-        </div>
-        <div class="exp-card-footer">
-          <div class="exp-social">
-            <a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-            <a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-            <a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+      <!-- ── FLIP CARD 1 — BLACK DIAMOND MOTO (Premium) ── -->
+      <div class="flip-card premium" data-cat="constructeur" data-name="Black Diamond Moto" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img">
+              <span class="card-front-img-bg">BD</span>
+              <div class="card-front-logo">BD</div>
+              <span class="card-premium-badge">★ Premium</span>
+              <span class="card-stand-badge">Stand A-01</span>
+            </div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot constructeur"></span>Constructeur</div>
+              <div class="card-name">Black Diamond Moto</div>
+              <div class="card-desc-short">Pionnier de la moto haute performance artisanale. Avant-première mondiale de la V-Twin 1800cc.</div>
+            </div>
+            <div class="card-front-footer">
+              <div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div>
+            </div>
           </div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation(); openModal('bd')">Voir la fiche →</span>
-        </div>
-      </div>
-
-      <!-- PREMIUM 2 -->
-      <div class="exp-card premium" data-cat="equipement" data-name="Helmguard Pro Series" onclick="openModal('hg')">
-        <div class="exp-card-img">
-          <span class="exp-card-img-text">HG</span>
-          <div class="exp-card-img-logo">HG</div>
-          <span class="premium-badge">★ Premium</span>
-          <span class="stand-badge">Stand B-14</span>
-        </div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot equipement"></span>Équipement</div>
-          <div class="exp-name">Helmguard Pro Series</div>
-          <div class="exp-desc-short">Leader européen des casques haute sécurité. Gamme Racing 2026 en avant-première mondiale.</div>
-          <div class="exp-tags"><span class="exp-tag">Casques</span><span class="exp-tag">ECE 22.06</span><span class="exp-tag">Racing</span></div>
-        </div>
-        <div class="exp-card-footer">
-          <div class="exp-social">
-            <a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-            <a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <div class="flip-card-back">
+            <div class="card-back-header">
+              <div><div class="card-back-name">Black Diamond Moto</div><div class="card-back-stand">Stand A-01 — Hall 1</div></div>
+              <button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button>
+            </div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Pionnier de la moto haute performance artisanale. Présent dans 18 pays, Black Diamond allie savoir-faire traditionnel et technologies de pointe.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Produits présentés</div>
+                <div class="card-back-products">
+                  <div class="card-back-product">V-Twin 1800cc — Avant-première mondiale</div>
+                  <div class="card-back-product">Série Obsidian Café Racer</div>
+                  <div class="card-back-product">Kit carrosserie carbone 2026</div>
+                </div>
+              </div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">Custom</span><span class="card-back-tag">Performance</span><span class="card-back-tag">Avant-première</span><span class="card-back-tag">Essai</span></div>
+            </div>
+            <div class="card-back-footer">
+              <div class="card-social">
+                <a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                <a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              </div>
+              <a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a>
+            </div>
           </div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation(); openModal('hg')">Voir la fiche →</span>
         </div>
       </div>
 
-      <!-- STANDARD CARDS -->
-      <div class="exp-card" data-cat="preparation" data-name="Racer Culture Paris" onclick="openModal('rc')">
-        <div class="exp-card-img"><span class="exp-card-img-text">RC</span><div class="exp-card-img-logo">RC</div><span class="stand-badge">Stand C-07</span></div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot preparation"></span>Préparation</div>
-          <div class="exp-name">Racer Culture Paris</div>
-          <div class="exp-desc-short">Atelier de préparation reconnu, en compétition au Custom Show avec deux machines Café Racer.</div>
-          <div class="exp-tags"><span class="exp-tag">Café Racer</span><span class="exp-tag">Bobber</span><span class="exp-tag">Custom Show</span></div>
-        </div>
-        <div class="exp-card-footer">
-          <div class="exp-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation()">Contacter</span>
-        </div>
-      </div>
-
-      <div class="exp-card" data-cat="accessoire" data-name="MotoTech Paris" onclick="openModal('mt')">
-        <div class="exp-card-img"><span class="exp-card-img-text">MT</span><div class="exp-card-img-logo">MT</div><span class="stand-badge">Stand D-22</span></div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot accessoire"></span>Accessoires</div>
-          <div class="exp-name">MotoTech Paris</div>
-          <div class="exp-desc-short">Navigation, intercoms et systèmes embarqués pour motards modernes. Démo live GPS connecté.</div>
-          <div class="exp-tags"><span class="exp-tag">GPS</span><span class="exp-tag">Intercom</span><span class="exp-tag">Tech</span></div>
-        </div>
-        <div class="exp-card-footer">
-          <div class="exp-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation()">Contacter</span>
+      <!-- ── FLIP CARD 2 — HELMGUARD (Premium) ── -->
+      <div class="flip-card premium" data-cat="equipement" data-name="Helmguard Pro Series" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img"><span class="card-front-img-bg">HG</span><div class="card-front-logo">HG</div><span class="card-premium-badge">★ Premium</span><span class="card-stand-badge">Stand B-14</span></div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot equipement"></span>Équipement</div>
+              <div class="card-name">Helmguard Pro Series</div>
+              <div class="card-desc-short">Leader européen des casques haute sécurité. Gamme Racing 2026 en avant-première mondiale.</div>
+            </div>
+            <div class="card-front-footer"><div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div></div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-header"><div><div class="card-back-name">Helmguard Pro Series</div><div class="card-back-stand">Stand B-14 — Hall 2</div></div><button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button></div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Leader européen de la protection moto depuis 1987. Casques certifiés ECE 22.06, DOT et FIM.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Produits présentés</div><div class="card-back-products"><div class="card-back-product">Gamme Racing 2026 (inédit)</div><div class="card-back-product">Intégral Carbon GT Pro</div><div class="card-back-product">Modulable Touring Elite</div></div></div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">Casques</span><span class="card-back-tag">ECE 22.06</span><span class="card-back-tag">Racing</span></div>
+            </div>
+            <div class="card-back-footer"><div class="card-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div><a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a></div>
+          </div>
         </div>
       </div>
 
-      <div class="exp-card" data-cat="concession" data-name="Paris Vmax Motors">
-        <div class="exp-card-img"><span class="exp-card-img-text">PV</span><div class="exp-card-img-logo">PV</div><span class="stand-badge">Stand E-03</span></div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot concession"></span>Concession</div>
-          <div class="exp-name">Paris Vmax Motors</div>
-          <div class="exp-desc-short">Concession multimarque premium, offres de reprise et financement sur place. 6 marques représentées.</div>
-          <div class="exp-tags"><span class="exp-tag">Occasion</span><span class="exp-tag">Financement</span><span class="exp-tag">Essai</span></div>
-        </div>
-        <div class="exp-card-footer">
-          <div class="exp-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation()">Contacter</span>
-        </div>
-      </div>
-
-      <div class="exp-card" data-cat="equipement" data-name="GridRide Textile">
-        <div class="exp-card-img"><span class="exp-card-img-text">GR</span><div class="exp-card-img-logo">GR</div><span class="stand-badge">Stand B-29</span></div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot equipement"></span>Équipement</div>
-          <div class="exp-name">GridRide Textile</div>
-          <div class="exp-desc-short">Vêtements techniques CE niveau 2 : blousons, pantalons, combinaisons cuir et textile. Sur mesure.</div>
-          <div class="exp-tags"><span class="exp-tag">Textile</span><span class="exp-tag">Cuir</span><span class="exp-tag">CE Niv.2</span></div>
-        </div>
-        <div class="exp-card-footer">
-          <div class="exp-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation()">Contacter</span>
+      <!-- ── FLIP CARD 3 — RACER CULTURE ── -->
+      <div class="flip-card" data-cat="preparation" data-name="Racer Culture Paris" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img"><span class="card-front-img-bg">RC</span><div class="card-front-logo">RC</div><span class="card-stand-badge">Stand C-07</span></div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot preparation"></span>Préparation</div>
+              <div class="card-name">Racer Culture Paris</div>
+              <div class="card-desc-short">Atelier reconnu, en compétition au Custom Show avec deux machines Café Racer.</div>
+            </div>
+            <div class="card-front-footer"><div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div></div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-header"><div><div class="card-back-name">Racer Culture Paris</div><div class="card-back-stand">Stand C-07 — Hall 3</div></div><button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button></div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Atelier parisien de préparation sur mesure depuis 2014. Deux machines en compétition au Custom Show 2026.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Produits présentés</div><div class="card-back-products"><div class="card-back-product">Machine #1 — Café Racer Custom Show</div><div class="card-back-product">Machine #2 — Bobber Custom Show</div><div class="card-back-product">Consultations sur mesure</div></div></div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">Café Racer</span><span class="card-back-tag">Bobber</span><span class="card-back-tag">Custom Show</span></div>
+            </div>
+            <div class="card-back-footer"><div class="card-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div><a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a></div>
+          </div>
         </div>
       </div>
 
-      <div class="exp-card" data-cat="constructeur" data-name="Veloce Italia">
-        <div class="exp-card-img"><span class="exp-card-img-text">VI</span><div class="exp-card-img-logo">VI</div><span class="stand-badge">Stand A-12</span></div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot constructeur"></span>Constructeur</div>
-          <div class="exp-name">Veloce Italia</div>
-          <div class="exp-desc-short">Constructeur italien de sportives à l'ancienne. Présentation de la Testa Rossa 890 Sport.</div>
-          <div class="exp-tags"><span class="exp-tag">Sportive</span><span class="exp-tag">Italie</span><span class="exp-tag">Naked</span></div>
-        </div>
-        <div class="exp-card-footer">
-          <div class="exp-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation()">Contacter</span>
-        </div>
-      </div>
-
-      <div class="exp-card" data-cat="preparation" data-name="Iron Forge Customs">
-        <div class="exp-card-img"><span class="exp-card-img-text">IF</span><div class="exp-card-img-logo">IF</div><span class="stand-badge">Stand C-18</span></div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot preparation"></span>Préparation</div>
-          <div class="exp-name">Iron Forge Customs</div>
-          <div class="exp-desc-short">Spécialiste Scrambler et Adventure. Live build en direct sur scène centrale tout le week-end.</div>
-          <div class="exp-tags"><span class="exp-tag">Scrambler</span><span class="exp-tag">Adventure</span><span class="exp-tag">Live Build</span></div>
-        </div>
-        <div class="exp-card-footer">
-          <div class="exp-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation()">Contacter</span>
+      <!-- ── FLIP CARD 4 — MOTOTECH ── -->
+      <div class="flip-card" data-cat="accessoire" data-name="MotoTech Paris" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img"><span class="card-front-img-bg">MT</span><div class="card-front-logo">MT</div><span class="card-stand-badge">Stand D-22</span></div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot accessoire"></span>Accessoires</div>
+              <div class="card-name">MotoTech Paris</div>
+              <div class="card-desc-short">Navigation, intercoms et systèmes embarqués pour motards modernes. Démo live GPS connecté.</div>
+            </div>
+            <div class="card-front-footer"><div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div></div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-header"><div><div class="card-back-name">MotoTech Paris</div><div class="card-back-stand">Stand D-22 — Hall 4</div></div><button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button></div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Spécialiste des solutions numériques pour motards. Navigation, intercoms Bluetooth, caméras et alarmes connectées.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Produits présentés</div><div class="card-back-products"><div class="card-back-product">GPS MotoNav Pro 2026</div><div class="card-back-product">Intercom BT-Connect X5</div><div class="card-back-product">Caméra embarquée 4K</div></div></div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">GPS</span><span class="card-back-tag">Intercom</span><span class="card-back-tag">Tech</span></div>
+            </div>
+            <div class="card-back-footer"><div class="card-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div><a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a></div>
+          </div>
         </div>
       </div>
 
-      <div class="exp-card" data-cat="accessoire" data-name="LumiRoad Éclairage">
-        <div class="exp-card-img"><span class="exp-card-img-text">LR</span><div class="exp-card-img-logo">LR</div><span class="stand-badge">Stand D-08</span></div>
-        <div class="exp-card-body">
-          <div class="exp-cat-pill"><span class="cat-dot accessoire"></span>Accessoires</div>
-          <div class="exp-name">LumiRoad Éclairage</div>
-          <div class="exp-desc-short">Spécialiste de l'éclairage LED moto homologué. Phares additionnels, feux de jour et accessoires.</div>
-          <div class="exp-tags"><span class="exp-tag">LED</span><span class="exp-tag">Homologué</span><span class="exp-tag">Phares</span></div>
+      <!-- ── FLIP CARD 5 — PARIS VMAX ── -->
+      <div class="flip-card" data-cat="concession" data-name="Paris Vmax Motors" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img"><span class="card-front-img-bg">PV</span><div class="card-front-logo">PV</div><span class="card-stand-badge">Stand E-03</span></div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot concession"></span>Concession</div>
+              <div class="card-name">Paris Vmax Motors</div>
+              <div class="card-desc-short">Concession multimarque premium, reprise et financement sur place. 6 marques représentées.</div>
+            </div>
+            <div class="card-front-footer"><div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div></div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-header"><div><div class="card-back-name">Paris Vmax Motors</div><div class="card-back-stand">Stand E-03 — Hall 1</div></div><button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button></div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Concession multimarque premium avec 6 marques représentées. Offres de reprise et financement sur place.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Services proposés</div><div class="card-back-products"><div class="card-back-product">Essais sous réservation au stand</div><div class="card-back-product">Reprise & estimation immédiate</div><div class="card-back-product">Financement 0% sur 12 mois</div></div></div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">Occasion</span><span class="card-back-tag">Financement</span><span class="card-back-tag">Essai</span></div>
+            </div>
+            <div class="card-back-footer"><div class="card-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div><a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a></div>
+          </div>
         </div>
-        <div class="exp-card-footer">
-          <div class="exp-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div>
-          <span class="exp-contact-btn" onclick="event.stopPropagation()">Contacter</span>
+      </div>
+
+      <!-- ── FLIP CARD 6 — GRIDRIDE ── -->
+      <div class="flip-card" data-cat="equipement" data-name="GridRide Textile" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img"><span class="card-front-img-bg">GR</span><div class="card-front-logo">GR</div><span class="card-stand-badge">Stand B-29</span></div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot equipement"></span>Équipement</div>
+              <div class="card-name">GridRide Textile</div>
+              <div class="card-desc-short">Vêtements techniques CE niveau 2 : blousons, pantalons, combinaisons cuir et textile.</div>
+            </div>
+            <div class="card-front-footer"><div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div></div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-header"><div><div class="card-back-name">GridRide Textile</div><div class="card-back-stand">Stand B-29 — Hall 2</div></div><button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button></div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Vêtements techniques pour motards, certifiés CE niveau 2. Confection sur mesure disponible au stand.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Produits présentés</div><div class="card-back-products"><div class="card-back-product">Blousons cuir & textile</div><div class="card-back-product">Pantalons renforcés CE2</div><div class="card-back-product">Gants & combinaisons racing</div></div></div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">Textile</span><span class="card-back-tag">Cuir</span><span class="card-back-tag">CE Niv.2</span></div>
+            </div>
+            <div class="card-back-footer"><div class="card-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div><a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── FLIP CARD 7 — VELOCE ITALIA ── -->
+      <div class="flip-card" data-cat="constructeur" data-name="Veloce Italia" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img"><span class="card-front-img-bg">VI</span><div class="card-front-logo">VI</div><span class="card-stand-badge">Stand A-12</span></div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot constructeur"></span>Constructeur</div>
+              <div class="card-name">Veloce Italia</div>
+              <div class="card-desc-short">Constructeur italien de sportives à l'ancienne. Présentation de la Testa Rossa 890 Sport.</div>
+            </div>
+            <div class="card-front-footer"><div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div></div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-header"><div><div class="card-back-name">Veloce Italia</div><div class="card-back-stand">Stand A-12 — Hall 1</div></div><button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button></div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Constructeur italien indépendant, spécialisé dans les motos sportives inspirées des années 70-80.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Produits présentés</div><div class="card-back-products"><div class="card-back-product">Testa Rossa 890 Sport</div><div class="card-back-product">Corsa 650 Naked</div><div class="card-back-product">Accessoires & pièces d'origine</div></div></div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">Sportive</span><span class="card-back-tag">Italie</span><span class="card-back-tag">Naked</span></div>
+            </div>
+            <div class="card-back-footer"><div class="card-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div><a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── FLIP CARD 8 — IRON FORGE ── -->
+      <div class="flip-card" data-cat="preparation" data-name="Iron Forge Customs" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img"><span class="card-front-img-bg">IF</span><div class="card-front-logo">IF</div><span class="card-stand-badge">Stand C-18</span></div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot preparation"></span>Préparation</div>
+              <div class="card-name">Iron Forge Customs</div>
+              <div class="card-desc-short">Spécialiste Scrambler et Adventure. Live build en direct sur scène centrale tout le week-end.</div>
+            </div>
+            <div class="card-front-footer"><div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div></div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-header"><div><div class="card-back-name">Iron Forge Customs</div><div class="card-back-stand">Stand C-18 — Hall 3</div></div><button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button></div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Atelier spécialisé Scrambler et Adventure. Live build en direct sur la scène centrale les 2 jours.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Animations</div><div class="card-back-products"><div class="card-back-product">Live Build Scrambler — en direct</div><div class="card-back-product">Démo montage & finition</div><div class="card-back-product">Conseils préparation sur mesure</div></div></div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">Scrambler</span><span class="card-back-tag">Adventure</span><span class="card-back-tag">Live Build</span></div>
+            </div>
+            <div class="card-back-footer"><div class="card-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div><a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── FLIP CARD 9 — LUMIROAD ── -->
+      <div class="flip-card" data-cat="accessoire" data-name="LumiRoad Éclairage" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-front-img"><span class="card-front-img-bg">LR</span><div class="card-front-logo">LR</div><span class="card-stand-badge">Stand D-08</span></div>
+            <div class="card-front-body">
+              <div class="card-cat-pill"><span class="cat-dot accessoire"></span>Accessoires</div>
+              <div class="card-name">LumiRoad Éclairage</div>
+              <div class="card-desc-short">Spécialiste de l'éclairage LED moto homologué. Phares additionnels, feux de jour et accessoires.</div>
+            </div>
+            <div class="card-front-footer"><div class="card-flip-hint"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Cliquer pour voir la fiche</div></div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-header"><div><div class="card-back-name">LumiRoad Éclairage</div><div class="card-back-stand">Stand D-08 — Hall 4</div></div><button class="card-close-flip" onclick="event.stopPropagation(); flipCard(this.closest('.flip-card'))">✕</button></div>
+            <div class="card-back-body">
+              <div><div class="card-back-section-title">À propos</div><div class="card-back-desc">Spécialiste français de l'éclairage LED homologué pour motos. Toutes gammes disponibles, montage rapide.</div></div>
+              <div class="card-back-sep"></div>
+              <div><div class="card-back-section-title">Produits présentés</div><div class="card-back-products"><div class="card-back-product">Phares additionnels LED homologués</div><div class="card-back-product">Feux de jour DRL universels</div><div class="card-back-product">Kits éclairage intérieur & carénage</div></div></div>
+              <div class="card-back-sep"></div>
+              <div class="card-back-tags"><span class="card-back-tag">LED</span><span class="card-back-tag">Homologué</span><span class="card-back-tag">Phares</span></div>
+            </div>
+            <div class="card-back-footer"><div class="card-social"><a href="#" class="soc-ico" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div><a href="contact.html" class="card-contact-btn" onclick="event.stopPropagation()">Contacter →</a></div>
+          </div>
         </div>
       </div>
 
@@ -539,166 +649,6 @@
   </div><!-- end exposants-area -->
 </div><!-- end main -->
 
-<!-- MODAL FICHE EXPOSANT -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" id="modalBox">
-    <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('open')">✕</button>
-
-    <!-- Modal content for Black Diamond -->
-    <div id="modal-bd">
-      <div class="modal-img">
-        <span style="font-family:var(--font-display);font-size:5rem;font-weight:700;color:rgba(255,255,255,0.06)">BD</span>
-        <div class="modal-img-badge">
-          <span style="background:var(--red);color:var(--white);font-family:var(--font-cond);font-size:9px;font-weight:600;letter-spacing:0.2em;padding:3px 10px;border-radius:1px;text-transform:uppercase">★ Exposant Premium</span>
-        </div>
-      </div>
-      <div class="modal-body">
-        <div class="modal-header">
-          <div class="modal-cat">Constructeur • Motos Custom & Performance</div>
-          <div class="modal-name">Black Diamond Moto</div>
-          <div class="modal-stand">Stand A-01 — Hall 1, Allée A</div>
-        </div>
-        <div class="modal-grid">
-          <div>
-            <div class="modal-section-title">À propos</div>
-            <div class="modal-desc">Fondé en 2009, Black Diamond Moto est pionnier de la moto haute performance artisanale. Présent dans 18 pays, l'atelier allie savoir-faire traditionnel et technologies de pointe pour produire des machines uniques à la croisée du custom et de la sportive.</div>
-          </div>
-          <div>
-            <div class="modal-section-title">Produits présentés</div>
-            <div class="modal-products">
-              <div class="modal-product-item">V-Twin 1800cc — Avant-première mondiale</div>
-              <div class="modal-product-item">Série Obsidian Café Racer</div>
-              <div class="modal-product-item">Châssis aluminium forgé sur mesure</div>
-              <div class="modal-product-item">Kit carrosserie carbone 2026</div>
-              <div class="modal-product-item">Accessoires & merchandising officiel</div>
-            </div>
-          </div>
-        </div>
-        <div style="margin-bottom:1.5rem">
-          <div class="modal-section-title">Animations au stand</div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <span style="background:rgba(192,57,43,0.1);border:1px solid rgba(192,57,43,0.2);color:var(--red);font-family:var(--font-cond);font-size:9px;letter-spacing:0.15em;padding:4px 10px;border-radius:1px;text-transform:uppercase">Essai sur rendez-vous</span>
-            <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:var(--chrome-light);font-family:var(--font-cond);font-size:9px;letter-spacing:0.15em;padding:4px 10px;border-radius:1px;text-transform:uppercase">Conférence sam. 11h</span>
-            <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:var(--chrome-light);font-family:var(--font-cond);font-size:9px;letter-spacing:0.15em;padding:4px 10px;border-radius:1px;text-transform:uppercase">Custom Show Competitor</span>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-social">
-          <a href="#" class="soc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="#" class="soc-ico"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" class="soc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
-        </div>
-        <div class="modal-links">
-          <a href="#" class="btn btn-ghost" style="font-size:11px;padding:0.5rem 1.2rem">Visiter le site</a>
-          <a href="contact.html" class="btn btn-primary" style="font-size:11px;padding:0.5rem 1.2rem">Contacter l'exposant</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal content for Helmguard (hidden by default) -->
-    <div id="modal-hg" style="display:none">
-      <div class="modal-img"><span style="font-family:var(--font-display);font-size:5rem;font-weight:700;color:rgba(255,255,255,0.06)">HG</span></div>
-      <div class="modal-body">
-        <div class="modal-header">
-          <div class="modal-cat">Équipement • Casques & Protection</div>
-          <div class="modal-name">Helmguard Pro Series</div>
-          <div class="modal-stand">Stand B-14 — Hall 2, Allée B</div>
-        </div>
-        <div class="modal-grid">
-          <div>
-            <div class="modal-section-title">À propos</div>
-            <div class="modal-desc">Leader européen de la protection moto depuis 1987. Helmguard conçoit des casques alliant design premium et sécurité maximale, certifiés ECE 22.06, DOT et FIM. Présentation exclusive de la gamme Racing 2026.</div>
-          </div>
-          <div>
-            <div class="modal-section-title">Produits présentés</div>
-            <div class="modal-products">
-              <div class="modal-product-item">Gamme Racing 2026 (inédit)</div>
-              <div class="modal-product-item">Intégral Carbon GT Pro</div>
-              <div class="modal-product-item">Modulable Touring Elite</div>
-              <div class="modal-product-item">Casque jet Urban S</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-social"><a href="#" class="soc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div>
-        <div class="modal-links">
-          <a href="#" class="btn btn-ghost" style="font-size:11px;padding:0.5rem 1.2rem">Visiter le site</a>
-          <a href="contact.html" class="btn btn-primary" style="font-size:11px;padding:0.5rem 1.2rem">Contacter l'exposant</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal RC -->
-    <div id="modal-rc" style="display:none">
-      <div class="modal-img"><span style="font-family:var(--font-display);font-size:5rem;font-weight:700;color:rgba(255,255,255,0.06)">RC</span></div>
-      <div class="modal-body">
-        <div class="modal-header">
-          <div class="modal-cat">Préparation • Custom & Racing</div>
-          <div class="modal-name">Racer Culture Paris</div>
-          <div class="modal-stand">Stand C-07 — Hall 3, Allée C</div>
-        </div>
-        <div class="modal-grid">
-          <div>
-            <div class="modal-section-title">À propos</div>
-            <div class="modal-desc">Atelier parisien spécialisé dans la préparation sur mesure depuis 2014. Reconnu sur la scène européenne pour ses Café Racer et Bobber. Deux machines en compétition au Custom Show 2026.</div>
-          </div>
-          <div>
-            <div class="modal-section-title">Produits présentés</div>
-            <div class="modal-products">
-              <div class="modal-product-item">Machine #1 Custom Show — Café Racer</div>
-              <div class="modal-product-item">Machine #2 Custom Show — Bobber</div>
-              <div class="modal-product-item">Accessoires de préparation</div>
-              <div class="modal-product-item">Consultations sur mesure</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-social"><a href="#" class="soc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div>
-        <div class="modal-links">
-          <a href="contact.html" class="btn btn-primary" style="font-size:11px;padding:0.5rem 1.2rem">Contacter l'exposant</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal MT -->
-    <div id="modal-mt" style="display:none">
-      <div class="modal-img"><span style="font-family:var(--font-display);font-size:5rem;font-weight:700;color:rgba(255,255,255,0.06)">MT</span></div>
-      <div class="modal-body">
-        <div class="modal-header">
-          <div class="modal-cat">Accessoires • Électronique & Connectivité</div>
-          <div class="modal-name">MotoTech Paris</div>
-          <div class="modal-stand">Stand D-22 — Hall 4, Allée D</div>
-        </div>
-        <div class="modal-grid">
-          <div>
-            <div class="modal-section-title">À propos</div>
-            <div class="modal-desc">Spécialiste des solutions numériques pour motards. Navigation, intercoms Bluetooth, caméras embarquées et systèmes d'alarme connectés. Démo live du nouveau GPS moto avec synchronisation smartphone.</div>
-          </div>
-          <div>
-            <div class="modal-section-title">Produits présentés</div>
-            <div class="modal-products">
-              <div class="modal-product-item">GPS MotoNav Pro 2025</div>
-              <div class="modal-product-item">Intercom BT-Connect X5</div>
-              <div class="modal-product-item">Caméra embarquée 4K</div>
-              <div class="modal-product-item">Système alarme IoT</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <div class="modal-social"><a href="#" class="soc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div>
-        <div class="modal-links">
-          <a href="contact.html" class="btn btn-primary" style="font-size:11px;padding:0.5rem 1.2rem">Contacter l'exposant</a>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- end modal -->
-</div><!-- end modal overlay -->
-
 <footer>
   <span class="footer-copy">© 2026 Iron West 2026 — Tous droits réservés</span>
   <nav class="footer-nav">
@@ -709,8 +659,9 @@
   </nav>
 </footer>
 
+
 <script>
-// Alpha index
+// ── INDEX ALPHABÉTIQUE ──
 const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const idx = document.getElementById('alphaIndex');
 alpha.forEach(l => {
@@ -725,6 +676,7 @@ alpha.forEach(l => {
   idx.appendChild(btn);
 });
 
+// ── FILTRES ──
 let currentFilter = 'all';
 let currentAlpha = null;
 
@@ -740,20 +692,27 @@ function setFilter(cat, btn) {
 function filterAll(alpha) {
   if (alpha !== undefined) currentAlpha = alpha === currentAlpha ? null : alpha;
   const search = document.getElementById('searchInput').value.toLowerCase();
-  const cards = document.querySelectorAll('.exp-card');
+  const cards = document.querySelectorAll('.flip-card');
   let visible = 0;
   cards.forEach(card => {
-    const name = card.dataset.name ? card.dataset.name.toLowerCase() : '';
-    const cat = card.dataset.cat || '';
-    const matchCat = currentFilter === 'all' || cat === currentFilter;
+    const name = (card.dataset.name || '').toLowerCase();
+    const cat  = card.dataset.cat || '';
+    const matchCat    = currentFilter === 'all' || cat === currentFilter;
     const matchSearch = !search || name.includes(search);
-    const matchAlpha = !currentAlpha || name.startsWith(currentAlpha.toLowerCase());
-    if (matchCat && matchSearch && matchAlpha) { card.style.display = 'flex'; visible++; }
-    else card.style.display = 'none';
+    const matchAlpha  = !currentAlpha || name.startsWith(currentAlpha.toLowerCase());
+    if (matchCat && matchSearch && matchAlpha) {
+      card.style.display = 'block';
+      visible++;
+    } else {
+      card.style.display = 'none';
+      card.classList.remove('flipped'); // refermer si masqué
+    }
   });
-  document.getElementById('resultsCount').textContent = `Affichage de ${visible} exposant${visible>1?'s':''}`;
+  document.getElementById('resultsCount').textContent =
+    `Affichage de ${visible} exposant${visible > 1 ? 's' : ''}`;
 }
 
+// ── VUE GRILLE / LISTE ──
 function setView(mode) {
   const container = document.getElementById('exposantsContainer');
   const gBtn = document.getElementById('gridBtn');
@@ -761,30 +720,37 @@ function setView(mode) {
   if (mode === 'grid') {
     container.className = 'grid-view';
     gBtn.classList.add('active'); lBtn.classList.remove('active');
-    document.querySelectorAll('.exp-card').forEach(c => { c.style.flexDirection = 'column'; });
   } else {
     container.className = 'list-view';
     lBtn.classList.add('active'); gBtn.classList.remove('active');
   }
+  // Refermer toutes les cartes lors du changement de vue
+  document.querySelectorAll('.flip-card').forEach(c => c.classList.remove('flipped'));
 }
 
-function openModal(id) {
-  document.querySelectorAll('[id^="modal-"]').forEach(m => m.style.display = 'none');
-  const target = document.getElementById('modal-' + id);
-  if (target) { target.style.display = 'block'; }
-  document.getElementById('modalOverlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
+// ── FLIP CARD ──
+function flipCard(card) {
+  const isFlipped = card.classList.contains('flipped');
+  // Refermer toutes les autres cartes
+  document.querySelectorAll('.flip-card.flipped').forEach(c => {
+    if (c !== card) c.classList.remove('flipped');
+  });
+  // Basculer la carte cliquée
+  card.classList.toggle('flipped', !isFlipped);
 }
 
-function closeModal(e) {
-  if (e.target === document.getElementById('modalOverlay')) {
-    document.getElementById('modalOverlay').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-}
-
+// Fermer avec Echap
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow = ''; }
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.flip-card.flipped').forEach(c => c.classList.remove('flipped'));
+  }
+});
+
+// Init compteur
+document.addEventListener('DOMContentLoaded', () => {
+  const total = document.querySelectorAll('.flip-card').length;
+  document.getElementById('resultsCount').textContent =
+    `Affichage de ${total} exposants`;
 });
 </script>
 </body>
