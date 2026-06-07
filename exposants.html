@@ -239,6 +239,7 @@
     .exp-list-actions{display:none;}
     .modal-grid{grid-template-columns:1fr;}
   }
+    .nav-cta{display:flex;align-items:center;gap:12px;}.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--chrome-light);}@media(max-width:1100px){.nav-links{display:none !important;}.nav-hamburger{display:flex !important;}}
 </style>
 </head>
 <body>
@@ -257,9 +258,12 @@
     <li><a href="index.html#infos">Infos pratiques</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div style="display:flex;gap:10px">
+  <div class="nav-cta">
     <a href="login.html" class="btn btn-ghost">Mon compte</a>
     <a href="billetterie.html" class="btn btn-primary">Billetterie</a>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
