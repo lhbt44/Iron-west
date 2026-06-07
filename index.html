@@ -656,206 +656,192 @@
     line-height: 1.6;
   }
 
-  /* ── EXPOSANTS ── */
+  /* ── EXPOSANTS — CATALOGUE ── */
   .exposants {
     background: var(--dark);
     border-top: 1px solid rgba(255,255,255,0.05);
     border-bottom: 1px solid rgba(255,255,255,0.05);
   }
 
-  .exposants-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 3rem;
-  }
-
-  .filter-btn {
-    padding: 0.5rem 1.2rem;
-    font-family: var(--font-cond);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 2px;
-    color: var(--chrome-light);
-    cursor: pointer;
-    transition: all var(--transition);
-  }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-    background: var(--red);
-    border-color: var(--red);
-    color: var(--white);
-  }
-
-  .exposants-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.05);
+  .catalogue-wrap {
+    position: relative;
     border-radius: 4px;
     overflow: hidden;
+    cursor: pointer;
   }
 
-  .exposant-card {
+  /* Grille de vignettes en arrière-plan */
+  .catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+    filter: blur(0px);
+    transition: filter 0.4s ease;
+  }
+
+  .catalogue-wrap:hover .catalogue-grid {
+    filter: blur(2px) brightness(0.6);
+  }
+
+  .catalogue-card {
     background: rgba(255,255,255,0.02);
-    padding: 2rem;
+    padding: 1.8rem 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    transition: all var(--transition);
+    gap: 6px;
     position: relative;
-    overflow: hidden;
+    transition: background var(--transition);
   }
 
-  .exposant-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--red);
-    transform: scaleX(0);
-    transition: transform var(--transition);
+  .catalogue-card.cat-premium {
+    background: rgba(192,57,43,0.06);
+    border-bottom: 1px solid rgba(192,57,43,0.15);
   }
 
-  .exposant-card:hover { background: rgba(255,255,255,0.04); }
-  .exposant-card:hover::before { transform: scaleX(1); }
-
-  .exposant-card.premium {
-    background: rgba(192,57,43,0.05);
-    border: 1px solid rgba(192,57,43,0.2);
-  }
-
-  .exposant-card.premium::before { transform: scaleX(1); }
-
-  .exposant-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .exposant-logo {
-    width: 60px;
-    height: 60px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 2px;
-    display: flex;
+  .catalogue-card.cat-more {
+    background: rgba(255,255,255,0.03);
     align-items: center;
     justify-content: center;
-    font-family: var(--font-display);
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--chrome-light);
-    flex-shrink: 0;
+    text-align: center;
   }
 
-  .exposant-badge {
-    font-family: var(--font-cond);
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 1px;
-    border: 1px solid rgba(192,57,43,0.5);
-    color: var(--red);
-    background: rgba(192,57,43,0.1);
-  }
-
-  .exposant-stand {
-    font-family: var(--font-cond);
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    color: var(--chrome);
-    text-transform: uppercase;
-  }
-
-  .exposant-name {
-    font-family: var(--font-cond);
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--white);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .exposant-category {
-    font-size: 0.8rem;
-    color: var(--chrome);
-  }
-
-  .exposant-desc {
-    font-size: 0.85rem;
-    color: var(--chrome-light);
-    line-height: 1.7;
-    flex: 1;
-  }
-
-  .exposant-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .tag {
-    font-family: var(--font-cond);
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 1px;
-    color: var(--chrome-light);
-  }
-
-  .exposant-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.05);
-  }
-
-  .exposant-social {
-    display: flex;
-    gap: 10px;
-  }
-
-  .social-link {
-    width: 28px;
-    height: 28px;
+  .cc-logo {
+    width: 48px;
+    height: 48px;
+    background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    transition: all var(--transition);
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--chrome-light);
+    margin-bottom: 4px;
   }
 
-  .social-link svg {
-    width: 12px;
-    height: 12px;
-    fill: var(--chrome);
-    transition: fill var(--transition);
+  .cat-premium .cc-logo {
+    border-color: rgba(192,57,43,0.3);
+    color: var(--red);
   }
 
-  .social-link:hover {
-    border-color: var(--red);
-    background: rgba(192,57,43,0.1);
+  .cc-name {
+    font-family: var(--font-cond);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
   }
 
-  .social-link:hover svg { fill: var(--red); }
+  .cc-cat {
+    font-family: var(--font-cond);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--chrome);
+  }
+
+  .cc-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--red);
+    color: var(--white);
+    font-family: var(--font-cond);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 1px;
+  }
+
+  .cc-more-num {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .cc-more-num span {
+    color: var(--red);
+  }
+
+  .cc-more-label {
+    font-family: var(--font-cond);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--chrome);
+  }
+
+  /* OVERLAY CTA */
+  .catalogue-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10,10,10,0);
+    transition: background 0.4s ease;
+    pointer-events: none;
+    border-radius: 4px;
+  }
+
+  .catalogue-wrap:hover .catalogue-overlay {
+    background: rgba(10,10,10,0.75);
+    backdrop-filter: blur(4px);
+    pointer-events: all;
+  }
+
+  .catalogue-overlay-content {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+  }
+
+  .catalogue-wrap:hover .catalogue-overlay-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .catalogue-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 2.5rem !important;
+    font-size: 13px !important;
+    letter-spacing: 0.2em !important;
+    box-shadow: 0 12px 40px rgba(192,57,43,0.4);
+    transition: all 0.3s ease !important;
+  }
+
+  .catalogue-cta:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 18px 50px rgba(192,57,43,0.5) !important;
+  }
+
+  /* Mobile : overlay toujours visible */
+  @media (max-width: 700px) {
+    .catalogue-grid { grid-template-columns: repeat(2, 1fr); }
+    .catalogue-overlay {
+      position: relative;
+      background: transparent;
+      pointer-events: all;
+      margin-top: 1.5rem;
+    }
+    .catalogue-overlay-content { opacity: 1; transform: none; }
+    .catalogue-wrap:hover .catalogue-grid { filter: none; }
+  }
 
   /* ── PROGRAMME ── */
   .programme {
@@ -1341,7 +1327,7 @@
     <div class="nav-logo-mark"></div>
     <div class="nav-logo-text">
       <span class="nav-logo-name">Iron West</span>
-      <span class="nav-logo-sub"></span>
+      <span class="nav-logo-sub">Les Herbiers 2026</span>
     </div>
   </a>
 
@@ -1551,6 +1537,7 @@
 <!-- EXPOSANTS -->
 <section class="exposants" id="exposants">
   <div class="section-inner">
+
     <div class="section-header center reveal">
       <div class="section-eyebrow center">
         <span class="section-eyebrow-line"></span>
@@ -1561,142 +1548,74 @@
       <p class="section-desc">100+ exposants sélectionnés pour leur excellence. Constructeurs, équipementiers, préparateurs, accessoiristes.</p>
     </div>
 
-    <div class="exposants-filters reveal">
-      <button class="filter-btn active" onclick="filterExposants('all', this)">Tous</button>
-      <button class="filter-btn" onclick="filterExposants('constructeur', this)">Constructeurs</button>
-      <button class="filter-btn" onclick="filterExposants('equipement', this)">Équipement</button>
-      <button class="filter-btn" onclick="filterExposants('accessoire', this)">Accessoires</button>
-      <button class="filter-btn" onclick="filterExposants('preparation', this)">Préparation</button>
-      <button class="filter-btn" onclick="filterExposants('concession', this)">Concessions</button>
-    </div>
+    <!-- CATALOGUE VISUEL -->
+    <div class="catalogue-wrap reveal">
 
-    <div class="exposants-grid" id="exposantsGrid">
-
-      <!-- EXPOSANT PREMIUM -->
-      <div class="exposant-card premium" data-cat="constructeur">
-        <div class="exposant-header">
-          <div class="exposant-logo">BD</div>
-          <div>
-            <span class="exposant-badge">★ Premium</span>
-            <div class="exposant-stand" style="margin-top:6px">Stand A-01</div>
-          </div>
+      <!-- Grille de logos/vignettes simulant un catalogue -->
+      <div class="catalogue-grid">
+        <div class="catalogue-card cat-premium">
+          <div class="cc-logo">BD</div>
+          <div class="cc-name">Black Diamond Moto</div>
+          <div class="cc-cat">Constructeur</div>
+          <span class="cc-badge">★ Premium</span>
         </div>
-        <div>
-          <div class="exposant-name">Black Diamond Moto</div>
-          <div class="exposant-category">Constructeur • Motos Custom & Performance</div>
+        <div class="catalogue-card">
+          <div class="cc-logo">HG</div>
+          <div class="cc-name">Helmguard Pro</div>
+          <div class="cc-cat">Équipement</div>
         </div>
-        <p class="exposant-desc">Pionnier de la moto haute performance artisanale. Black Diamond présente en avant-première mondiale sa nouvelle V-Twin 1800cc à injection directe et cadre aluminium forgé.</p>
-        <div class="exposant-tags">
-          <span class="tag">Custom</span>
-          <span class="tag">Performance</span>
-          <span class="tag">Avant-première</span>
+        <div class="catalogue-card">
+          <div class="cc-logo">RC</div>
+          <div class="cc-name">Racer Culture</div>
+          <div class="cc-cat">Préparation</div>
         </div>
-        <div class="exposant-footer">
-          <div class="exposant-social">
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-          </div>
-          <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:10px">Contacter</a>
+        <div class="catalogue-card">
+          <div class="cc-logo">MT</div>
+          <div class="cc-name">MotoTech</div>
+          <div class="cc-cat">Accessoires</div>
+        </div>
+        <div class="catalogue-card">
+          <div class="cc-logo">IF</div>
+          <div class="cc-name">Iron Forge</div>
+          <div class="cc-cat">Préparation</div>
+        </div>
+        <div class="catalogue-card">
+          <div class="cc-logo">GR</div>
+          <div class="cc-name">GridRide</div>
+          <div class="cc-cat">Équipement</div>
+        </div>
+        <div class="catalogue-card">
+          <div class="cc-logo">VI</div>
+          <div class="cc-name">Veloce Italia</div>
+          <div class="cc-cat">Constructeur</div>
+        </div>
+        <div class="catalogue-card">
+          <div class="cc-logo">LR</div>
+          <div class="cc-name">LumiRoad</div>
+          <div class="cc-cat">Accessoires</div>
+        </div>
+        <!-- Carte "et plus encore" -->
+        <div class="catalogue-card cat-more">
+          <div class="cc-more-num">100<span>+</span></div>
+          <div class="cc-more-label">exposants</div>
         </div>
       </div>
 
-      <!-- EXPOSANTS STANDARD -->
-      <div class="exposant-card" data-cat="equipement">
-        <div class="exposant-header">
-          <div class="exposant-logo">HG</div>
-          <div><div class="exposant-stand">Stand B-14</div></div>
-        </div>
-        <div>
-          <div class="exposant-name">Helmguard Pro</div>
-          <div class="exposant-category">Équipement • Casques & Protection</div>
-        </div>
-        <p class="exposant-desc">Leader européen des casques haute sécurité. Casques intégraux, modulables et de ville avec certification DOT / ECE 22.06. Présentation de la gamme Racing 2026.</p>
-        <div class="exposant-tags"><span class="tag">Casques</span><span class="tag">ECE 22.06</span></div>
-        <div class="exposant-footer">
-          <div class="exposant-social">
-            <a href="#" class="social-link" aria-label="Web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
-          </div>
-          <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:10px">Contacter</a>
+      <!-- Overlay CTA -->
+      <div class="catalogue-overlay">
+        <div class="catalogue-overlay-content">
+          <div style="font-family:var(--font-cond);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1rem">Iron West 2026 — Les Herbiers</div>
+          <h3 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:var(--white);margin-bottom:0.8rem;line-height:1.1">Découvrez tous<br>nos exposants</h3>
+          <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);margin-bottom:2rem;max-width:360px;line-height:1.7">Constructeurs, équipementiers, préparateurs, concessions… Explorez les fiches complètes et planifiez votre visite.</p>
+          <a href="exposants.html" class="btn btn-primary btn-lg catalogue-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Voir les exposants
+          </a>
         </div>
       </div>
 
-      <div class="exposant-card" data-cat="preparation">
-        <div class="exposant-header">
-          <div class="exposant-logo">RC</div>
-          <div><div class="exposant-stand">Stand C-07</div></div>
-        </div>
-        <div>
-          <div class="exposant-name">Racer Culture</div>
-          <div class="exposant-category">Préparation • Custom & Racing</div>
-        </div>
-        <p class="exposant-desc">Atelier de préparation moto reconnu sur la scène européenne. Participant au Custom Show avec deux machines en compétition dans la catégorie Café Racer.</p>
-        <div class="exposant-tags"><span class="tag">Café Racer</span><span class="tag">Bobber</span><span class="tag">Custom Show</span></div>
-        <div class="exposant-footer">
-          <div class="exposant-social"><a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div>
-          <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:10px">Contacter</a>
-        </div>
-      </div>
+    </div><!-- end catalogue-wrap -->
 
-      <div class="exposant-card" data-cat="accessoire">
-        <div class="exposant-header">
-          <div class="exposant-logo">MT</div>
-          <div><div class="exposant-stand">Stand D-22</div></div>
-        </div>
-        <div>
-          <div class="exposant-name">MotoTech Paris</div>
-          <div class="exposant-category">Accessoires • Électronique & Connectivité</div>
-        </div>
-        <p class="exposant-desc">Solutions de navigation, intercoms et systèmes embarqués pour motards modernes. Démonstration live du nouveau GPS moto avec intégration smartphone.</p>
-        <div class="exposant-tags"><span class="tag">GPS</span><span class="tag">Intercom</span><span class="tag">Tech</span></div>
-        <div class="exposant-footer">
-          <div class="exposant-social"><a href="#" class="social-link" aria-label="Web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div>
-          <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:10px">Contacter</a>
-        </div>
-      </div>
-
-      <div class="exposant-card" data-cat="concession">
-        <div class="exposant-header">
-          <div class="exposant-logo">PV</div>
-          <div><div class="exposant-stand">Stand E-03</div></div>
-        </div>
-        <div>
-          <div class="exposant-name">Paris Vmax Motors</div>
-          <div class="exposant-category">Concession • Multimarque Île-de-France</div>
-        </div>
-        <p class="exposant-desc">Concession multimarque premium avec 6 marques représentées. Offres de reprise et financement sur place. Essais disponibles sous réservation au stand.</p>
-        <div class="exposant-tags"><span class="tag">Occasion</span><span class="tag">Financement</span><span class="tag">Essai</span></div>
-        <div class="exposant-footer">
-          <div class="exposant-social"><a href="#" class="social-link" aria-label="Web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div>
-          <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:10px">Contacter</a>
-        </div>
-      </div>
-
-      <div class="exposant-card" data-cat="equipement">
-        <div class="exposant-header">
-          <div class="exposant-logo">GR</div>
-          <div><div class="exposant-stand">Stand B-29</div></div>
-        </div>
-        <div>
-          <div class="exposant-name">GridRide Textile</div>
-          <div class="exposant-category">Équipement • Vêtements & Textile</div>
-        </div>
-        <p class="exposant-desc">Vêtements techniques pour motards : blousons, pantalons, gants et combinaisons en cuir et textile. Normes CE niveau 2. Taille sur mesure disponible.</p>
-        <div class="exposant-tags"><span class="tag">Textile</span><span class="tag">Cuir</span><span class="tag">CE Niveau 2</span></div>
-        <div class="exposant-footer">
-          <div class="exposant-social"><a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div>
-          <a href="#" class="btn btn-outline" style="padding:0.4rem 1rem; font-size:10px">Contacter</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div style="text-align:center; margin-top:3rem" class="reveal">
-      <a href="exposants.html" class="btn btn-outline btn-lg">Voir tous les exposants →</a>
-    </div>
   </div>
 </section>
 
@@ -2093,19 +2012,6 @@ function switchDay(day, btn) {
   });
   document.querySelectorAll('.prog-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
-}
-
-// ── FILTER EXPOSANTS ──
-function filterExposants(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.exposant-card').forEach(card => {
-    if (cat === 'all' || card.dataset.cat === cat) {
-      card.style.display = 'flex';
-    } else {
-      card.style.display = 'none';
-    }
-  });
 }
 
 // ── SCROLL REVEAL ──
